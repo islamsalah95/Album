@@ -2,7 +2,6 @@
 <div class="site-top">
     <div class="site-header clearfix">
         <div class="container">
-            <a href="#" class="site-brand pull-left"><strong>Masonry</strong> Free Template</a>
             <div class="social-icons pull-right">
                 <ul>
                     <li><a href="#" class="fa fa-facebook"></a></li>
@@ -51,7 +50,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8 text-center">
-                    <h2>Get free templates from <span class="blue">template</span><span class="green">mo</span></h2>
                     @if(Session::has('success'))
                     <div class="alert alert-success">
                         {{ Session::get('success') }}

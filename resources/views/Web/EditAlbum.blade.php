@@ -9,7 +9,7 @@
   justify-content: center;
   ">
   <div class="col-4" style="text-align: center">
-  <h2>Add Album</h2>
+  <h2>Edit Album</h2>
   <form action="{{route('albums.update',['albumId'=>$albumId])}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT') 

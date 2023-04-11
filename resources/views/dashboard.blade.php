@@ -5,8 +5,8 @@
     <div class="row">
     <div class="col" 
     style="
-     display: flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
