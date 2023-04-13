@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
    
     Route::get('/picture/edit/{albumId}', [PictureController::class, 'edit'])->name('picture.edit');
     Route::put('/picture/move/{albumId}', [PictureController::class, 'update'])->name('picture.move');
-
+    Route::delete('/picture/deleteSinglePic/{picId}', [PictureController::class, 'deleteSinglePic'])->name('picture.deleteSinglePic');
 
 });
 

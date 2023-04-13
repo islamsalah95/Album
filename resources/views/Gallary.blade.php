@@ -16,9 +16,13 @@
 
             <div class="title-over">
                 <h4><a href="#">{{$AlbumPicture->name}}</a></h4>
-
             </div>
         </div>
+        <form id="delete-form" action="{{ route('picture.deleteSinglePic', ['picId' => $AlbumPicture->id]) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('DELETE')
+            <button  type="submit" class="btn btn-danger">Delete</button>
+          </form>
     </div> <!-- /.post-masonry -->
 @empty
     <h2>No Pictures</h2>

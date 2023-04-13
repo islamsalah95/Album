@@ -96,8 +96,21 @@ class PictureController extends Controller
     public function destroyAllPictures($AlbumId)
     {
         $album = Album::find($AlbumId);
-         $album->Picture()->delete();
+        $results=$album->Picture;
+        foreach ($results as $result) {
+            CustomHelpers::deletePicture($result->name);     
+           }
+        $album->Picture()->delete();
         return redirect()->route('albums');
+
+    }
+
+    public function deleteSinglePic($picId)
+    {
+      $picture=Picture::where('id',$picId)->first();
+      CustomHelpers::deletePicture($picture->name);     
+      $picture->delete();
+    return redirect()->back()->with('success', 'Your pic has been delete.');
 
     }
 }
